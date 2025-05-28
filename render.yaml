@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: your-app-name  # Change this to your preferred service name
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+    # Add your Google Gemini API key in the Render dashboard
+    # under Environment Variables section
+    plan: free  # or 'starter' if you need more resources
